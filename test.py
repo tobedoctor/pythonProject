@@ -22,7 +22,7 @@ cpu_time = timeit.timeit(cpu_run, number=100)
 gpu_time = timeit.timeit(gpu_run, number=100)
 print('warmup:', cpu_time, gpu_time)
 
-cpu_time = timeit.timeit(cpu_run, number=10)
-gpu_time = timeit.timeit(gpu_run, number=10)
+cpu_time = timeit.timeit(cpu_run, number=100)
+gpu_time = timeit.timeit(gpu_run, number=100)
 print('run time:', cpu_time, gpu_time)
 
