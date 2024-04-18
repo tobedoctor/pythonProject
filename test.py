@@ -18,7 +18,7 @@ def gpu_run():
         c = tf.matmul(gpu_a, gpu_b)
     return c
 # warm up
-cpu_time = timeit.timeit(cpu_run, number=10)
+cpu_time = timeit.timeit(cpu_run, number=100)
 gpu_time = timeit.timeit(gpu_run, number=10)
 print('warmup:', cpu_time, gpu_time)
 
