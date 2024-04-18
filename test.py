@@ -2,12 +2,12 @@ import tensorflow as tf
 import timeit
 
 with tf.device('/cpu:0'):
-    cpu_a = tf.random.normal([10000, 1000])
-    cpu_b = tf.random.normal([1000, 2000])
+    cpu_a = tf.random.normal([100000, 10000])
+    cpu_b = tf.random.normal([10000, 20000])
     print(cpu_a.device, cpu_b.device)
 with tf.device('/gpu:0'):
-    gpu_a = tf.random.normal([10000, 1000])
-    gpu_b = tf.random.normal([1000, 2000])
+    gpu_a = tf.random.normal([100000, 10000])
+    gpu_b = tf.random.normal([10000, 20000])
     print(gpu_a.device, gpu_b.device)
 def cpu_run():
     with tf.device('/cpu:0'):
